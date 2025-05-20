@@ -81,6 +81,15 @@ CREATE TABLE blog_post_tags (
 
 Este esquema asegura integridad referencial mediante claves foráneas y elimina automáticamente los registros relacionados cuando se elimina un registro principal (`ON DELETE CASCADE`).
 
-## DEVELOPMENT EXERCISE
+## DEVELOPMENT 
+
+```bash
+node DEV_EXERCISE/exercise.mjs
+```
+
+Para ejecutar los test
+```bash
+node DEV_EXERCISE/test/exercise.test.mjs
+```
 
 ## LIBRARY SYS
