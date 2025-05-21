@@ -1,7 +1,8 @@
 import express from 'express';
-import bookRoutes from './routes/bookRoutes';
-import pool from './db';
-import { initializeTables } from './models/initializeTables';
+import bookRoutes from './features/book/book.routes';
+import libraryRoutes from './features/library/library.routes';
+import pool from './db/db';
+import { initializeTables } from './db/initializeTables';
 
 const app = express();
 const port = 3000;
@@ -34,4 +35,6 @@ app.get('/', (req, res) => {
 initializeDatabase();
 // Rutas para libros
 app.use('/api/books', bookRoutes);
+// Rutas para bibliotecas
+app.use('/api/libraries', libraryRoutes);
 

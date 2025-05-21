@@ -1,0 +1,29 @@
+### Variables
+@baseUrl = http://localhost:3000/api/libraries
+
+### Get all libraries
+GET {{baseUrl}}
+
+### Get library by ID
+GET {{baseUrl}}/1
+
+### Create new library
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "name": "Biblioteca Central",
+    "address": "Calle Principal 123"
+}
+
+### Update library
+PUT {{baseUrl}}/1
+Content-Type: application/json
+
+{
+    "name": "Biblioteca Central Actualizada",
+    "address": "Calle Principal 456"
+}
+
+### Delete library
+DELETE {{baseUrl}}/1
