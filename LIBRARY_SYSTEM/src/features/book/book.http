@@ -1,10 +1,8 @@
 ### Get all books
 GET http://localhost:3000/api/books
 
-###
-
 ### Get book by ID
-GET http://localhost:3000/api/books/1
+GET http://localhost:3000/api/books/12
 
 ###
 
@@ -17,24 +15,21 @@ content-type: application/json
     "author": "Miguel de Cervantes",
     "isbn": "9788420412146",
     "publishedDate": "1605-01-01",
-    "libraryId": 1
+    "libraryId": 2
 }
 
 ###
 
 ### Update book
-PUT http://localhost:3000/api/books/1 HTTP/1.1
+PUT http://localhost:3000/api/books/12 HTTP/1.1
 content-type: application/json
 
 {
     "title": "Don Quijote de la Mancha",
-    "author": "Miguel de Cervantes Saavedra",
-    "isbn": "9788420412146",
-    "publishedDate": "1605-01-01",
-    "libraryId": 1
+    "author": "Miguel de Cervantes Saavedra"
 }
 
 ###
 
 ### Delete book
-DELETE http://localhost:3000/api/books/1
+DELETE http://localhost:3000/api/books/12

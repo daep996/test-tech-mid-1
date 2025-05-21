@@ -1,0 +1,26 @@
+### Variables
+@baseUrl = http://localhost:3000/api
+@loanId = 2
+
+### Crear un nuevo préstamo
+POST {{baseUrl}}/loans
+Content-Type: application/json
+
+{
+    "member_id": 2,
+    "book_id": 15,
+    "loan_date": "2024-03-20T10:00:00Z",
+    "return_date": "2024-04-20T10:00:00Z"
+}
+
+### Obtener todos los préstamos
+GET {{baseUrl}}/loans
+
+### Obtener préstamos activos
+GET {{baseUrl}}/loans/active
+
+### Obtener un préstamo por ID
+GET {{baseUrl}}/loans/{{loanId}}
+
+### Devolver un libro
+PUT {{baseUrl}}/loans/{{loanId}}/return 

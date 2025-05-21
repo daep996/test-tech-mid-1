@@ -17,11 +17,11 @@ Content-Type: application/json
 }
 
 ### Update library
-PUT {{baseUrl}}/1
+PUT {{baseUrl}}/2
 Content-Type: application/json
 
 {
-    "name": "Biblioteca Central Actualizada",
+    "name": "Biblioteca Central II",
     "address": "Calle Principal 456"
 }
 

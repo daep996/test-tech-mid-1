@@ -1,0 +1,39 @@
+### Variables
+@baseUrl = http://localhost:3000/api
+@memberId = 1
+
+### Crear un nuevo miembro
+POST {{baseUrl}}/members
+Content-Type: application/json
+
+{
+    "name": "Juan Pérez",
+    "email": "juan.perez@email.com"
+}
+
+### Obtener todos los miembros
+GET {{baseUrl}}/members
+
+### Obtener un miembro por ID
+GET {{baseUrl}}/members/{{memberId}}
+
+### Actualizar un miembro (actualización parcial)
+PUT {{baseUrl}}/members/{{memberId}}
+Content-Type: application/json
+
+{
+    "email": "nuevo.email@email.com"
+}
+
+### Actualizar un miembro (todos los campos)
+PUT {{baseUrl}}/members/{{memberId}}
+Content-Type: application/json
+
+{
+    "name": "Juan Pérez Actualizado",
+    "email": "juan.actualizado@email.com",
+    "phone": "987-654-3210"
+}
+
+### Eliminar un miembro
+DELETE {{baseUrl}}/members/{{memberId}} 
