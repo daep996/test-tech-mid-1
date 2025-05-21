@@ -92,4 +92,40 @@ Para ejecutar los test
 node DEV_EXERCISE/test/exercise.test.mjs
 ```
 
-## LIBRARY SYS
+## LIBRARY 
+
+![Modelo Entidad -Relación (ERD) para una Biblioteca sencilla](DB_SHEMA/diagrama_er_2.png)
+
+### Características del Sistema de Biblioteca
+
+El sistema de biblioteca implementa las siguientes funcionalidades:
+
+- Gestión de libros (agregar, eliminar, buscar)
+- Gestión de miembros (registro, préstamos, devoluciones)
+- Sistema de préstamos con fechas de devolución
+- Búsqueda de libros por título, autor o categoría
+- Control de disponibilidad de libros
+
+### Requisitos
+
+- Node.js (versión 14 o superior)
+- PostgreSQL (para la base de datos)
+
+### Instalación
+
+1. Moverse en el directorio:
+
+```bash
+cd LIBRARY_SYSTEM
+```
+
+2. Instalar dependencias:
+```bash
+npm install
+```
+
+## Ejecución del Proyecto
+
+```bash
+npm run dev
+```
