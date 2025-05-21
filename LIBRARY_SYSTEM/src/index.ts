@@ -1,6 +1,8 @@
 import express from 'express';
 import bookRoutes from './features/book/book.routes';
 import libraryRoutes from './features/library/library.routes';
+import memberRoutes from './features/member/member.routes';
+import loanRoutes from './features/loan/loan.routes';
 import pool from './db/db';
 import { initializeTables } from './db/initializeTables';
 
@@ -31,10 +33,16 @@ async function initializeDatabase() {
 app.get('/', (req, res) => {
   res.send('¡Bienvenido al sistema de gestión de bibliotecas!');
 });
+
 // Iniciar la aplicación
 initializeDatabase();
+
 // Rutas para libros
 app.use('/api/books', bookRoutes);
 // Rutas para bibliotecas
 app.use('/api/libraries', libraryRoutes);
+// Rutas para miembros
+app.use('/api/members', memberRoutes);
+// Rutas para préstamos
+app.use('/api/loans', loanRoutes);
 
